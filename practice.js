@@ -1,30 +1,53 @@
-let uName = "ECMAScript";
+// var age = 30 // Declaration and Initialization
 
-console.log(uName);
+var age1; // Declaration
 
-let lName = "JavaScript";
-let LName = "Dynamically Typed";
+age1 = 40; // Initialization or assigning
 
-console.log(lName, LName);
+var age1 = 70; // Re-declaration
+age1 = "Eighty"; // Re-initialize or Reassign
 
-let $lName = "Single Page Application";
-let _lName = "SPA";
-// let 0lName = "SPA"; Numeric value is not allowed as a first letter
+console.log(age1);
 
-let l$Name1 = "abc";
+// let newAge = 150; Declaration and Initialization
 
-console.log($lName, _lName);
+let newAge; // Declaration 
 
-//Camel Case
-//Pascal Case
-//Under Case
+console.log(newAge);
 
-let newemployeeid = 10;
+newAge = 150; //Initialization or Assigning
 
-let newEmployeeId = 10 // Camel Case
+// let newAge = 30; Re-declare is not possible
 
-let NewEmployeeId = 10 // Pascal Case
+newAge = "Hundred" // Re-assign is possible
 
-let New_Employee_Id = 10 // Under_Case
+// const employeeName 'const' declarations must be initialized.
 
-let new_employee_id = 10 // Under_Case
+const employeeName = "xyz"
+
+// const employeeName Cannot redeclare block-scoped variable 'employeeName' as it is in const.
+
+// employeeName = 30 Cannot re-assign as it is assigned to const variable
+
+
+// printing statements
+
+// alert(employeeName)
+
+// document.write(newAge)
+
+document.writeln(newAge)
+
+// confirm(newAge)
+
+// let userAge = prompt("Enter your age:")
+
+// console.log(userAge)
+
+let userAge = 32
+
+console.error(userAge)
+
+console.warn(userAge)
+
+// console.clear()
