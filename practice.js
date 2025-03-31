@@ -1,53 +1,79 @@
-// var age = 30 // Declaration and Initialization
 
-var age1; // Declaration
+// Primitive Datatype
 
-age1 = 40; // Initialization or assigning
+// Number
 
-var age1 = 70; // Re-declaration
-age1 = "Eighty"; // Re-initialize or Reassign
+var num = 120;
+var num = 1.25;
 
-console.log(age1);
+console.log(num)
 
-// let newAge = 150; Declaration and Initialization
+// String
 
-let newAge; // Declaration 
+let userName = "Javascript is a Scription Language"
 
-console.log(newAge);
+userName = 'Javascript is a Single threaded Language'
 
-newAge = 150; //Initialization or Assigning
+userName = `ECMA Script`
 
-// let newAge = 30; Re-declare is not possible
+console.log(num, userName)
 
-newAge = "Hundred" // Re-assign is possible
+// Boolean
 
-// const employeeName 'const' declarations must be initialized.
+let condition = true;
 
-const employeeName = "xyz"
+condition = false
 
-// const employeeName Cannot redeclare block-scoped variable 'employeeName' as it is in const.
+console.log(condition)
 
-// employeeName = 30 Cannot re-assign as it is assigned to const variable
+// Undefined
+
+let noValue
+
+let nValue = undefined
+
+console.log(noValue, nValue)
+
+// Null
+
+let emptyValue = null
+
+console.log(emptyValue)
+
+// Single Line Comment
+
+/* 
+    Multi Line Comment
+    JavaScript
+    React JS
+*/
 
 
-// printing statements
+// Non-Primitive Datatype or Reference type
 
-// alert(employeeName)
+// Array
 
-// document.write(newAge)
+let multipleUsers = ["React JS", "JavaScript", "MongoDB", "Node JS"]
 
-document.writeln(newAge)
+console.log(multipleUsers)
 
-// confirm(newAge)
+console.log(multipleUsers[0], multipleUsers[1], multipleUsers[2])
 
-// let userAge = prompt("Enter your age:")
+console.log(multipleUsers.length)
 
-// console.log(userAge)
+console.log(multipleUsers[multipleUsers.length - 1])
 
-let userAge = 32
+// Object - Key value pair
 
-console.error(userAge)
+let vehicle = {
+    vehicleType : "Four Wheeler",
+    brand : "Hyundai",
+    price : 1000000,
+    fuelType: "Petrol"
+}
 
-console.warn(userAge)
+console.log(vehicle)
 
-// console.clear()
+console.log(vehicle.price)
+
+console.log(vehicle.brand)
