@@ -1,79 +1,47 @@
+// Arithmetic Operator
 
-// Primitive Datatype
+// Addition
+console.log(10 + 20);
 
-// Number
+// Subtraction
+console.log(20 - 5)
 
-var num = 120;
-var num = 1.25;
+// Multiplication
+console.log(20 * 2)
+
+// Division
+console.log(20 / 2) // Quotient ==> 10
+
+// Modulus
+console.log(20 % 3) // Remainder ==> 2
+
+// Exponential
+console.log(3 ** 3)
+
+// Increment - Decrement
+
+let num = 10;
+
+num = num + 1
 
 console.log(num)
 
-// String
+// Increment (++)
 
-let userName = "Javascript is a Scription Language"
+let num1 = 15
 
-userName = 'Javascript is a Single threaded Language'
+num1++ // Post Increment ==> num1 = num1 +1 = 15 + 1 = 16
 
-userName = `ECMA Script`
+++num1 // Pre Increment ==> num1 = num1 + 1 = 16 + 1 = 17
 
-console.log(num, userName)
+console.log(num1)
 
-// Boolean
+// Decrement (--)
 
-let condition = true;
+let num2 = 20
 
-condition = false
+num2-- // Post Decrement ==> num2 = num2 - 1 = 20 - 1 = 19
 
-console.log(condition)
+--num2 // Pre Decrement ==> num2 - 1 = 19 - 1 = 18
 
-// Undefined
-
-let noValue
-
-let nValue = undefined
-
-console.log(noValue, nValue)
-
-// Null
-
-let emptyValue = null
-
-console.log(emptyValue)
-
-// Single Line Comment
-
-/* 
-    Multi Line Comment
-    JavaScript
-    React JS
-*/
-
-
-// Non-Primitive Datatype or Reference type
-
-// Array
-
-let multipleUsers = ["React JS", "JavaScript", "MongoDB", "Node JS"]
-
-console.log(multipleUsers)
-
-console.log(multipleUsers[0], multipleUsers[1], multipleUsers[2])
-
-console.log(multipleUsers.length)
-
-console.log(multipleUsers[multipleUsers.length - 1])
-
-// Object - Key value pair
-
-let vehicle = {
-    vehicleType : "Four Wheeler",
-    brand : "Hyundai",
-    price : 1000000,
-    fuelType: "Petrol"
-}
-
-console.log(vehicle)
-
-console.log(vehicle.price)
-
-console.log(vehicle.brand)
+console.log(num2)
