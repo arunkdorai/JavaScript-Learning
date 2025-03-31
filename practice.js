@@ -1,47 +1,80 @@
-// Arithmetic Operator
 
-// Addition
-console.log(10 + 20);
+// Post Increment
 
-// Subtraction
-console.log(20 - 5)
+/*
+    1.Substitute
+    2.Operation
+    3.Increment
+*/
 
-// Multiplication
-console.log(20 * 2)
+let num = 20
+let num1 = num++
 
-// Division
-console.log(20 / 2) // Quotient ==> 10
+// num1 = 20++
+// num1 = 20
+// num = 21
 
-// Modulus
-console.log(20 % 3) // Remainder ==> 2
+console.log(num, num1) // (21, 20)
 
-// Exponential
-console.log(3 ** 3)
+let numm = 20
 
-// Increment - Decrement
+let num2 = numm++ + numm++
 
-let num = 10;
+// num2 = 20++ + 21++
+// num2 = 41
+// numm = 22
 
-num = num + 1
+console.log(numm, num2) // (22, 41)
 
-console.log(num)
+// Pre Increment
 
-// Increment (++)
+/*
+    1.Substitute with Increment
+    2.Operation
+*/
 
-let num1 = 15
+let newNum = 40
 
-num1++ // Post Increment ==> num1 = num1 +1 = 15 + 1 = 16
+let newNum1 = ++newNum
 
-++num1 // Pre Increment ==> num1 = num1 + 1 = 16 + 1 = 17
+// newNum1 = ++40 = 1 + 40 = 41
 
-console.log(num1)
+console.log(newNum, newNum1) // (41, 41)
 
-// Decrement (--)
+let newNumm = 50
 
-let num2 = 20
+let newNum2 = ++newNumm + ++newNumm
 
-num2-- // Post Decrement ==> num2 = num2 - 1 = 20 - 1 = 19
+// newNum2 = ++50 + ++51 = (1 + 50) + (1 + 51) = 51 + 52 = 103
+// newNumm = 52
 
---num2 // Pre Decrement ==> num2 - 1 = 19 - 1 = 18
+console.log(newNumm, newNum2) // (52, 103)
 
-console.log(num2)
+let newNummm = 30
+
+let newNum3 = newNummm++ + ++newNummm
+
+// newNum3 = 30 + 32 = 62
+// newNummm = 32
+
+console.log(newNummm, newNum3) // (32, 62)
+
+// Pre Decrement & Post Decrement
+
+let num4 = 10
+
+let num5 = num4-- + --num4
+
+// num5 = 10 + 8
+// num4 = 8
+
+console.log(num4, num5) // (8, 18)
+
+let num6 = 20
+
+let num7 = --num6 + num6--
+
+// num7 = 19 + 19
+// num6 = 18
+
+console.log(num6, num7) // (18, 38)
