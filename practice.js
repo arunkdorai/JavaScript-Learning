@@ -1,80 +1,77 @@
 
-// Post Increment
+// Assignment Operator
 
-/*
-    1.Substitute
-    2.Operation
-    3.Increment
-*/
+// Addition
 
-let num = 20
-let num1 = num++
+let age = 20
 
-// num1 = 20++
-// num1 = 20
-// num = 21
+age += 20
+// age = age + 20 = 40
 
-console.log(num, num1) // (21, 20)
+console.log("Age is:", age)
 
-let numm = 20
+let age1 = 25
+let val = 100
 
-let num2 = numm++ + numm++
+age1 += val
+// age1 = age1 + val = 25 + 100 = 125
 
-// num2 = 20++ + 21++
-// num2 = 41
-// numm = 22
+console.log("Age1 is:", age1)
 
-console.log(numm, num2) // (22, 41)
+// Subtraction
 
-// Pre Increment
+let age2 = 10
 
-/*
-    1.Substitute with Increment
-    2.Operation
-*/
+age2 -= 5
+// age2 = age2 - 5 = 10 - 5 = 5
 
-let newNum = 40
+console.log("Age2 is:", age2)
 
-let newNum1 = ++newNum
+// Multiplication
 
-// newNum1 = ++40 = 1 + 40 = 41
+let age3 = 3
 
-console.log(newNum, newNum1) // (41, 41)
+age3 *= 2
+// age3 = age3*2 = 3*2 = 6
 
-let newNumm = 50
+console.log("Age3 is:", age3)
 
-let newNum2 = ++newNumm + ++newNumm
+// Division
 
-// newNum2 = ++50 + ++51 = (1 + 50) + (1 + 51) = 51 + 52 = 103
-// newNumm = 52
+let age4 = 10
 
-console.log(newNumm, newNum2) // (52, 103)
+age4 /= 2
+// age4 = age4/2 = 10/2 = 5
 
-let newNummm = 30
+console.log("Age4 is:", age4)
 
-let newNum3 = newNummm++ + ++newNummm
+// Modulus
 
-// newNum3 = 30 + 32 = 62
-// newNummm = 32
+let age5 = 10
 
-console.log(newNummm, newNum3) // (32, 62)
+age5 %= 3
+// age5 = age5 % 3 = 10 % 3 = 1
 
-// Pre Decrement & Post Decrement
+console.log("Age5 is:", age5)
 
-let num4 = 10
+// Relational or Comparison Operator
 
-let num5 = num4-- + --num4
+console.log("Less than:", 20 < 20 )
 
-// num5 = 10 + 8
-// num4 = 8
+console.log("Less than or equal to:", 19 <= 20 )
 
-console.log(num4, num5) // (8, 18)
+console.log("Greater than:", 19 > 20 )
 
-let num6 = 20
+console.log("Greater than or equal to:", 21 >= 20 )
 
-let num7 = --num6 + num6--
+console.log("Equal to:", 21 == 20 )
 
-// num7 = 19 + 19
-// num6 = 18
+console.log("Equal to:", 20 == "20" )
 
-console.log(num6, num7) // (18, 38)
+console.log("Strict Equal to:", 20 === "20" )
+
+console.log("Not equal to:", 20 != 30 )
+
+console.log("Not equal to:", 20 != "20" )
+
+console.log("Strict not equal to:", 20 !== "20" )
