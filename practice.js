@@ -1,21 +1,13 @@
-// if - statement
 
-/*
-    if(condition) {
-        Statement
-    }
-*/
-
-// let uAge = 18
-
-// if(uAge >=18){
-//     console.log("User is eligible to vote");    
-// }
-
-// if-else statement
+// if else-if statement
 
 /*
     if(condition){
+    }
+    else if(condition){
+        statement
+    }
+    else if(condition){
         statement
     }
     else{
@@ -23,20 +15,42 @@
     }
 */
 
-// let uAge1 = 17
+/*
+let hour = 20
 
-// if(uAge1>=18){
-//     console.log("He is Eligible")
-// }
-// else{
-//     console.log("He is not eligible")
-// }
+else if ladder
 
-let pwd_input = true
-
-if(pwd_input){
-    console.log("Welcome to Website")
+if(hour>=1 && hour<=6){
+    console.log("Early Morning")
+}
+else if(hour>=7 && hour<=12){
+    console.log("Morning")
+}
+else if(hour>=13 && hour<=18){
+    console.log("Noon")
+}
+else if(hour>=19 && hour<=24){
+    console.log("Night")
 }
 else{
-    console.log("Password is incorrect")
+    console.log("It is not a valid hour")
+}
+*/
+
+let mark = 95
+
+if(mark>=41 && mark<=60){
+    console.log("C Grade")
+}
+else if(mark>=61 && mark<=80){
+    console.log("B Grade")
+}
+else if(mark>=81 && mark<=90){
+    console.log("A Grade")
+}
+else if(mark>=91 && mark<=100){
+    console.log("S Grade")
+}
+else{
+    console.log("Arrears")
 }
