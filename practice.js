@@ -1,33 +1,28 @@
-// Do while
-
-// let num = 10
-
-// do{
-//     console.log(num)
-//     num++
-// }
-// while(num<=20)
-
-// break 
-
-// for(let i = 1; i<=20; i++){
-//     if(i%2===0){
-//         if(i===10){
-//             break;
-//         }
-//         console.log(i)
-
-//     }
+// let person1 = {
+//     name1: "John",
+//     age: 40
 // }
 
-// continue
+// function printUserName(){
+//     console.log("Hello Everyone", person1.name1, person1.age)
+// }
+// printUserName()
 
-for(let i = 1; i<=20; i++){
-    if(i%2===0){
-        if(i===10){
-            continue;
-        }
-        console.log(i)
+/*
+function printUserName(uName, uAge){
+    console.log(`Hi ${uName}, your age is ${uAge} `)
+}
+printUserName("John", 32)
+printUserName("Willian", 28)
+printUserName("David", 25)
+*/
 
+function printUserName(uName, uAge){
+    if(uAge<40){
+        console.log(`Hi ${uName}, your age is ${uAge} `)
     }
 }
+
+printUserName("John", 60)
+printUserName("Willian", 28)
+printUserName("David", 25)
