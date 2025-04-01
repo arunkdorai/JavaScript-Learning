@@ -1,38 +1,19 @@
-
-// Nested If
-
-/*
-let age = 20
-let height = 160
-let weight = 75
-
-if(age>=18){
-    
-    if(height>=150){
-
-        if(weight>=45){
-            console.log("You are selected")
-        }
-        else{
-            console.log("Weigth is not matched")
-        }
-    }
-    else{
-        console.log("Heighth is not matched")
-    }
-}
-else{
-    console.log("Age is not valid")
-}
-*/
-
-
-// Ternary Operator
+// For loop
 
 /*
-    condition ? "Statement 1" : "Statement 2"
+    for(initialization; condition; counter){
+        statement
+    }
 */
 
-let pwd_input = false
+// for(let i = 1; i<=10; i++){
+//     console.log(i)
+// }
 
-pwd_input ? console.log("Welcome to website") : console.log("Password is incorrect");
+// for(let i = 1; i<=10; i++){
+//     if(i%2===0) console.log(i)
+// }
+
+for(let i = 1; i<=10; i++){
+    if(i%2!==0) console.log(i)
+}
