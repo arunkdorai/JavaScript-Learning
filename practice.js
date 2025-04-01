@@ -1,55 +1,30 @@
-// Logical Operator
 
-// Logical AND (&&)
+// Concatenation
 
-/* cond1 cond2 Result
-    True  True  True
-    True  False False
-    False True  False
-    False False False
-*/
-/*
-let age = 18;
+let str = "Hello"
+let str1 = " John"
 
-console.log(age >= 18 && age<=30) // true && true
+let output = str + str1
 
-age = 35;
-console.log(age >= 18 && age <= 30); // true && false
-age = 16;
-console.log(age >= 18 && age <= 30); // false && true - Short Circuit Evaluation
+console.log(output)
 
-let idProof = "Aadhaar";
+console.log(str + " " + str1 + " Welcome to Our Website")
 
-console.log(idProof == "Pancard" && idProof == "Driving License"); // false && false
-*/
+// Template String or Template Literal (``)
 
-// Logical OR (||)
+let newStr = `Javascript`
 
-/* cond1 cond2 Result
-    True  True  True
-    True  False True
-    False True  True
-    False False False
-*/
+console.log(newStr)
 
-/*
-let pwd_input = "12345"
+// String Interpolation
 
-console.log(pwd_input == "12345" || pwd_input == "54321") // True || False
+let newStr1 = `${newStr} is a Scription Language`
 
-pwd_input = "54321"
+console.log(newStr1)
 
-console.log(pwd_input == "12345" || pwd_input == "54321") // False || True
+let num = 5
+let first = 1
 
-let userName = "abc"
+console.log( num + "*" + first + "=" + (num*first))
 
-console.log(pwd_input == "54321" || userName == "abc") // True || True
-
-console.log(pwd_input == "12345" || userName == "xyz") // False || False
-*/
-
-// Logical Not (!)
-
-console.log(!(10 > 4))
-
-console.log(!false)
+console.log(`${num}*${first}=${num*first}`)
