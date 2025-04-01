@@ -1,27 +1,33 @@
-// While loop
+// Do while
 
-/*
-    initialization
-    while(condition){
-        statement
-        counter
-    }
-*/
+// let num = 10
 
-// let val = 10
+// do{
+//     console.log(num)
+//     num++
+// }
+// while(num<=20)
 
-// while(val>=1){
-//     console.log(val)
-//     val--
+// break 
+
+// for(let i = 1; i<=20; i++){
+//     if(i%2===0){
+//         if(i===10){
+//             break;
+//         }
+//         console.log(i)
+
+//     }
 // }
 
-let num = 1234
-let sum = 0
-// 1 + 2 + 3 + 4 = 10
+// continue
 
-while(num>0){
-    let last = num%10 // 1234%10 = 4
-    num = parseInt(num/10)
-    sum = sum + last
+for(let i = 1; i<=20; i++){
+    if(i%2===0){
+        if(i===10){
+            continue;
+        }
+        console.log(i)
+
+    }
 }
-console.log(sum)
