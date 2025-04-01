@@ -1,46 +1,38 @@
 
-// Switch Statement
+// Nested If
 
 /*
-    switch(expression){
-        case1 value : Statement;
-        break;
-        case2 value : Statement;
-        break;
-        case3 value : Statement;
-        break;
-        default: Statement
-        break
+let age = 20
+let height = 160
+let weight = 75
+
+if(age>=18){
+    
+    if(height>=150){
+
+        if(weight>=45){
+            console.log("You are selected")
+        }
+        else{
+            console.log("Weigth is not matched")
+        }
     }
+    else{
+        console.log("Heighth is not matched")
+    }
+}
+else{
+    console.log("Age is not valid")
+}
 */
 
+
+// Ternary Operator
+
 /*
-let trafficLight = "green"
+    condition ? "Statement 1" : "Statement 2"
+*/
 
-switch(trafficLight){
-    case "red" : console.log("Stop")
-    break
-    case "yellow" : console.log("Slow Down")
-    break
-    case "green" : console.log("Go")
-    break
-    default: console.log("Pay Fine")
-    break
-}
-    */
+let pwd_input = false
 
-// Fall through method
-
-let day = "Jan"
-
-switch(day){
-    case "Monday":
-    case "Wednesday":
-    case "Friday": console.log("Weekday")
-    break
-    case "Saturday": 
-    case "Sunday": console.log("WeekEnd")
-    break
-    default : console.log("It is not a day")
-    break
-}
+pwd_input ? console.log("Welcome to website") : console.log("Password is incorrect");
