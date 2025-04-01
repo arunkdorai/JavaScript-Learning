@@ -1,56 +1,46 @@
 
-// if else-if statement
+// Switch Statement
 
 /*
-    if(condition){
-    }
-    else if(condition){
-        statement
-    }
-    else if(condition){
-        statement
-    }
-    else{
-        statement
+    switch(expression){
+        case1 value : Statement;
+        break;
+        case2 value : Statement;
+        break;
+        case3 value : Statement;
+        break;
+        default: Statement
+        break
     }
 */
 
 /*
-let hour = 20
+let trafficLight = "green"
 
-else if ladder
+switch(trafficLight){
+    case "red" : console.log("Stop")
+    break
+    case "yellow" : console.log("Slow Down")
+    break
+    case "green" : console.log("Go")
+    break
+    default: console.log("Pay Fine")
+    break
+}
+    */
 
-if(hour>=1 && hour<=6){
-    console.log("Early Morning")
-}
-else if(hour>=7 && hour<=12){
-    console.log("Morning")
-}
-else if(hour>=13 && hour<=18){
-    console.log("Noon")
-}
-else if(hour>=19 && hour<=24){
-    console.log("Night")
-}
-else{
-    console.log("It is not a valid hour")
-}
-*/
+// Fall through method
 
-let mark = 95
+let day = "Jan"
 
-if(mark>=41 && mark<=60){
-    console.log("C Grade")
-}
-else if(mark>=61 && mark<=80){
-    console.log("B Grade")
-}
-else if(mark>=81 && mark<=90){
-    console.log("A Grade")
-}
-else if(mark>=91 && mark<=100){
-    console.log("S Grade")
-}
-else{
-    console.log("Arrears")
+switch(day){
+    case "Monday":
+    case "Wednesday":
+    case "Friday": console.log("Weekday")
+    break
+    case "Saturday": 
+    case "Sunday": console.log("WeekEnd")
+    break
+    default : console.log("It is not a day")
+    break
 }
