@@ -1,53 +1,42 @@
-/*
-// Named Function
+// Variable Declaration Hoisting
 
-function add(uName){
-        console.log("Named Function "+ uName)
+/* Before Code Execution - Declaration will come at top
+
+var a
+let b
+const c
+sample(){
 }
-add("I'm a Function")
-
-// Anonymous Function
-
-let aFun = function(a, b){
-        console.log("Anonymous Function " + (a*b))
-}
-aFun(5,5)
-
-// Arrow Function
-
-let arrowFun = (a,b) => {
-        console.log("Arrow Function " + (a*b))
-}
-arrowFun(10,20)
-
-let arrowFun1 = (a,b) => console.log("Arrow Function " + (a*b))
-arrowFun1(20,5)
-
-let newArFun = a => a*a
-let sqr = newArFun(5)
-console.log(sqr)
-
-
-// Higher Order Function
-
-function func1(){
-        console.log("I'm a Higher order function")
-}
-
-function func2(){
-        console.log("I'm a call back function")
-}
-
-func1(func2())
+let sample1
 */
 
+// Actual Execution Starts
 
-function add(callBack, a, b){
-        console.log(a+b)
-        callBack(100, 200)
-}
-function add1(num1, num2){
-        console.log(num1+num2)
+// console.log(a)
+// var a = 10;
+// console.log(a)
+
+// console.log(b)
+// let b = 20
+// console.log(b)
+
+// console.log(c)
+// const c = 30
+// console.log(c)
+
+// Function Declaration Hoisting - This is only for named function. Anonymous and Arrow Function are not hoisted.
+
+sample()
+function sample() {
+        console.log("I'm in")
 }
 
-add(add1, 20, 40)
+sample1() // Type Error
+var sample1 = function() {
+        console.log("Am I accessible")
+}
+
+sample2() // Reference Error
+let sample2 = function() {
+        console.log("Am I accessible")
+}
