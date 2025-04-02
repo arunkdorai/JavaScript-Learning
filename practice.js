@@ -1,55 +1,64 @@
-// Return Type
+// Var - function scope
 
 /*
-function findRectArea(l, b){
-        return l*b;
-}
-let r1 = findRectArea(100, 50)
-
-console.log(r1)
-
-function findRectArea(l, b){
-        let condition = true
-        if(condition){
-                return l*b;
+function outerFunction() {
+        if(true){
+                var functionVar = "I'm a Variable"
+                console.log(functionVar)
         }
-        else{
-                return null
+        console.log(functionVar)
+}
+outerFunction()
+
+function blockScoped() {
+        if(true){
+                let blockVariable = "I'm a Block scoped variable"
+                console.log(blockVariable)
         }
+        console.log(blockVariable)
 }
-let r1 = findRectArea(100, 50)
-
-console.log(r1)
+blockScoped()
 
 
-function cubic(num) {
-      return num**3  
+function blockScoped() {
+        if(true){
+                const blockVariable1 = "I'm a const variable"
+                console.log(blockVariable1)
+        }
+        console.log(blockVariable1)
 }
-let pw = cubic(4)
-
-console.log(pw)
+blockScoped()
 
 
-// For multiple return values in same return, only the last value will be considered
+var globalScopedVar = "I'm accessible throught the global context"
+let blockScoped = "I'm a let variable"
+const blockScoped1 = "I'm a const variable"
 
-function cubic(num) {
-        return (num**3, "Eighty", true, 120)
-}
-
-let npw = cubic(4)
-
-console.log(npw)
-
-
-// Non-return Type
-
-function name1() {
-        console.log("Non-return type")
-}
-name1()
+console.log(window.globalScopedVar)
+console.log(window.blockScoped)
+console.log(window.blockScoped1)
 */
-function name1() {
-        console.log("Non-return type")
+
+var a = 10
+let b = 20
+const c = 30
+
+function accessGloblaLocalVar() {
+        var a = 101
+        let b = 201
+        const c = 301
+
+        function innerFunction(){
+                var a = 100
+                let b = 200
+                const c = 300
+                console.log(a, b, c)
+        }
+        innerFunction()
+        console.log(a, b, c)
 }
-let noReturn = name1()
-console.log(noReturn)
+accessGloblaLocalVar()
+
+console.log(a, b, c)
+
+// Scope chain
