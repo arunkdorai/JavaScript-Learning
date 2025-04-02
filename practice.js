@@ -1,28 +1,32 @@
-// Uncurrying
-
-// function add(a, b, c){
-//         console.log(a+b+c)
-// }
-// add(1, 2, 3)
-
-// Currying
-
-function add1(a) {
-        return function(b){
-                return function(c){
-                        console.log(a+b+c)
-                }
-        }
+function normalFun() {
+  console.log("Executed whenever called");
 }
 
-// add1(10)(20)(50)
+normalFun();
+normalFun();
+normalFun();
 
-let curry1 = add1(100)
+// Self Invoked Function (IIFE)
 
-console.log(curry1)
+(function () {
+  console.log("Self Invoked Function");
+})();
 
-let curry2 = curry1(200)
+(function (userName, age) {
+  console.log("Self Invoked Function ", userName+age);
+})("Virat", 36);
 
-console.log(curry2)
 
-curry2(300)
+// Closure
+
+function outerFunction() {
+        let outerVariable = "I'm from outer scope"
+        function innerFunction() {
+                console.log(outerVariable)
+        }
+        return innerFunction
+}
+
+let inFunc = outerFunction()
+
+inFunc()
