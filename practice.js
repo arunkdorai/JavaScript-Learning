@@ -1,42 +1,28 @@
-// Variable Declaration Hoisting
+// Uncurrying
 
-/* Before Code Execution - Declaration will come at top
+// function add(a, b, c){
+//         console.log(a+b+c)
+// }
+// add(1, 2, 3)
 
-var a
-let b
-const c
-sample(){
-}
-let sample1
-*/
+// Currying
 
-// Actual Execution Starts
-
-// console.log(a)
-// var a = 10;
-// console.log(a)
-
-// console.log(b)
-// let b = 20
-// console.log(b)
-
-// console.log(c)
-// const c = 30
-// console.log(c)
-
-// Function Declaration Hoisting - This is only for named function. Anonymous and Arrow Function are not hoisted.
-
-sample()
-function sample() {
-        console.log("I'm in")
+function add1(a) {
+        return function(b){
+                return function(c){
+                        console.log(a+b+c)
+                }
+        }
 }
 
-sample1() // Type Error
-var sample1 = function() {
-        console.log("Am I accessible")
-}
+// add1(10)(20)(50)
 
-sample2() // Reference Error
-let sample2 = function() {
-        console.log("Am I accessible")
-}
+let curry1 = add1(100)
+
+console.log(curry1)
+
+let curry2 = curry1(200)
+
+console.log(curry2)
+
+curry2(300)
