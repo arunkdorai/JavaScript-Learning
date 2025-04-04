@@ -1,44 +1,55 @@
-// Spread Operator
+// Array Destructuring
 
-// Array
+let arr = [10, 20, 30, 40];
 
-// let hobbies = ["Cricket", "Tennis", "Chess"]
-// let hobbies1 = ["Reader", "Writer"]
+let [a, b, c, d] = arr;
 
-// let newArr = [...hobbies, ...hobbies1]
+console.log(a, b, c, d)
 
-// hobbies[0] = "Baseball"
+let arr1 = [15, 25, 35, 45];
 
-// console.log(newArr, hobbies)
+let [x,,,z] = arr1
 
-// let newArr1 = [...newArr, "Video Editor", "Content Writer"]
+console.log(x, z)
 
-// console.log(newArr1)
+let arr2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
-// Object
+let [a1, a2, a3, ...a4] = arr2 // ...a4 is rest operator
 
-let empDetail = {
-    empId: "ID5546",
-    empName: "Arun",
-    empRole: "Full Stack Developer"
+console.log(a1, a2, a3, a4)
+
+// Nested Array Destructuring
+
+
+let nestArr = [1,2,3,4, [10, 20, [30, 40]]]
+
+let [b1, b2, b3, b4, [c1, c2, [d1, d2]]] = nestArr
+
+console.log(b4, d2)
+
+// Object Destructuring
+
+let obj = {
+    id:1,
+    name1: "Arun"
 }
 
-let team2 = {...empDetail, empSalary : 1000000, team2Desig : "SDE"}
+let {id, name1} = obj
 
-console.log(team2)
+console.log(id, name1)
 
-let team3 = {...empDetail, empId:"ID12345" ,empSalary : 1000000, team2Desig : "SDE"}
+// Nested Object Destructuring
 
-console.log(team3)
-
-// Rest Parameter or Rest Operator
-
-function restParams(...arr){
-    console.log(arr)
+let nestObj = {
+    id:1,
+    name1: "Arun",
+    bankDetails: {
+        accName:"Kumar",
+        accNo:123456,
+        branch:"xyz"
+    }
 }
-restParams(1,2,3,4,5)
 
-function restParams1(a, b, ...arr1){ // A rest parameter must be last in a parameter list.
-    console.log(a, b, arr1)
-}
-restParams1(1,2,3,4,5)
+let {id, name1, bankDetails: { accName, accNo, branch }} = nestObj
+
+console.log(id, name1, accName, accNo, branch)
