@@ -1,36 +1,43 @@
-// Generator Function
+// Data Structures
 
-function* generatorFunction(){
-    yield "First val"
-    yield "Second val"
-    yield "Third val"
-    return "Final Val"
-}
+// Array
 
-let generator = generatorFunction()
+let flavors = ["vanilla", "butterscotch", "lavender", "chocolate"];
 
-console.log(generator.next())
+// console.log(flavors)
 
-console.log("I'm executing after first yield statement")
+console.log(flavors[0]);
+console.log(flavors[1]);
+console.log(flavors[2]);
+console.log(flavors.length);
 
-console.log(generator.next().value)
+let lastIndex = flavors.length - 1;
 
-console.log("I'm executing after second yield statement")
+console.log(lastIndex, flavors[lastIndex]);
 
-console.log(generator.next().done)
+let sample = [1, "two", true, null, undefined, { id: 1 }];
 
-console.log(generator.next())
+// Array Constructor
+
+let newArray = new Array();
+
+newArray[0] = "First";
+newArray[1] = "Second";
+newArray[2] = "Third";
+newArray[3] = "Fourth";
+
+console.log(newArray);
+console.log(newArray.length);
+
+// Dense and Sparse Array
+
+let denseArray = [1, 2, 3, 4, 5]; // Contigous Memory Location
+
+//  Eg. memory address 1004, 1008, 1012, 1016, 1020
+
+// formula = baseAddress + (index * size)
 
 
-function* url(){
-    yield "https:/"
-    yield "www.google.com"
-    yield 'homePage'
-}
+let sparseArray = [10, 20, ,40, ,60] // Hash Table or Hash Map
 
-let origin1 = url()
-
-console.log(origin1.next().value)
-console.log(origin1.next().value)
-console.log(origin1.next().value)
-console.log(origin1.next())
+console.log(sparseArray)
