@@ -1,48 +1,27 @@
-// Array Methods - sort, reverse, includes, join & toString
+// Array Methods - indexOf() & lastIndexOf() in Javascript
 
-// Sort Method - It changes/modifies original array
-/*
-let arr = [4, 9, 3, 5, 10, 20, 15, 45, 114, 345, "&", " "]
+// indexOf method - Doesn't affect original array. Returns the index of the first occurrence of a value in an array, or -1 if it is not present. Left to right search.
 
-arr.sort() // Sorts based on ASCII Order
+let arr = [10, 20, 10, 30, 40, 30, 50];
 
-console.log(arr)
+let newIndex = arr.indexOf(30);
 
-// Reverse Method - It changes/modifies original array
+console.log(newIndex);
 
-let arr1 = [10, 20, 30, 40]
+let newIndex1 = arr.indexOf(30, 4);
 
-arr1.reverse()
+console.log(newIndex1);
 
-console.log(arr1)
+let newIndex2 = arr.indexOf(30, -4);
 
-// Includes Method - To check if a value is present in the array or not. It returns a boolean.
-
-console.log(arr1.includes(40))
-console.log(arr1.includes(50))
-*/
-
-// Join Method
-
-let arr20 = [1,2,3,4,5]
-
-let joinedVal = arr20.join()
-
-console.log(joinedVal)
-
-let joinedVal1 = arr20.join(".")
-
-console.log(joinedVal1)
-
-let joinedVal2 = arr20.join("-")
-
-console.log(joinedVal2)
+console.log(newIndex2)
 
 
-// toString Method
+// lastIndexOf method - Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present. Right to left search.
 
-let str = arr20.toString()
+// let findIndexFromLast = arr.lastIndexOf(10)
+// let findIndexFromLast = arr.lastIndexOf(20, 3)
+let findIndexFromLast = arr.lastIndexOf(60, 5)
 
-console.log(str)
 
-// join vs toString
+console.log(findIndexFromLast)
