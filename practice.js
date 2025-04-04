@@ -1,43 +1,67 @@
-// Data Structures
+// Object
 
-// Array
+/*
+let userProfile = {
+    userName : "Arun",
+    age : 32,
+    hairColor : "black",
+    eyeColor : "brown",
+    eat : function () {
+        console.log("I'm gonna eat ice cream")
+        return "Vanilla Ice Cream"
+    }
+}
 
-let flavors = ["vanilla", "butterscotch", "lavender", "chocolate"];
+console.log(userProfile.userName)
+console.log(userProfile.hairColor, userProfile.age)
+console.log(userProfile.eat)
 
-// console.log(flavors)
+let iceCreamType = userProfile.eat()
+console.log(iceCreamType)
 
-console.log(flavors[0]);
-console.log(flavors[1]);
-console.log(flavors[2]);
-console.log(flavors.length);
+// Property in string type
+let vehicle = {
+    "vehicleType" : "four-wheeler",
+    "price" : 200000,
+    fuelType : "petrol",
+    "seater type" : ["two", "three", "four"]
+}
 
-let lastIndex = flavors.length - 1;
-
-console.log(lastIndex, flavors[lastIndex]);
-
-let sample = [1, "two", true, null, undefined, { id: 1 }];
-
-// Array Constructor
-
-let newArray = new Array();
-
-newArray[0] = "First";
-newArray[1] = "Second";
-newArray[2] = "Third";
-newArray[3] = "Fourth";
-
-console.log(newArray);
-console.log(newArray.length);
-
-// Dense and Sparse Array
-
-let denseArray = [1, 2, 3, 4, 5]; // Contigous Memory Location
-
-//  Eg. memory address 1004, 1008, 1012, 1016, 1020
-
-// formula = baseAddress + (index * size)
+console.log(vehicle["vehicleType"])
+console.log(vehicle["price"])
+console.log(vehicle.fuelType)
+console.log(vehicle["seater type"])
+console.log(vehicle["seater type"][2])
+*/
 
 
-let sparseArray = [10, 20, ,40, ,60] // Hash Table or Hash Map
 
-console.log(sparseArray)
+
+let uName = "Arun"
+let age = 30
+
+let person1 = {
+    uName : uName,
+    age : age
+}
+
+// Shorthand Assigned Property
+let person2 = {
+    uName,
+    age
+}
+
+console.log(person1, person2)
+
+
+// Dynamic Property
+
+let dynamicProp = "employeeId"
+let person3 = {
+    uName,
+    age,
+    ['dynamicProp'] : "UEQ2343",
+    [dynamicProp] : "IFS246"
+}
+console.log(person3)
+console.log(person3.dynamicProp, person3[dynamicProp])
