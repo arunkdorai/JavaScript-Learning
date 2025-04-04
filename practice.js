@@ -1,47 +1,53 @@
-// for of loop
+// For In loop
 
-// Array
+// Object
 
-let arr = [10, 100, 1000, 10000];
 
-// syntax of for of loop: for(let iterator/element of object){
+let person1 = {
+    uName : "Arun",
+    hobbies : ["Cricket", "Web Development", "Gaming"],
+    familyDetails : {
+        totalMembers : 6,
+        siblings : ["a", "b", "c", "d"]
+    },
+    walk(){
+        console.log("I'm going to home")
+    }
+}
 
+
+// syntax of for in loop : for(let key in object){
+//     console.log(key)
 // }
 
-for (let val of arr) {
-    console.log(val)
-}
+    for(let key in person1){
+        console.log(key)
+    }
 
-// String
+    for(let key in person1){
+        console.log(person1[key])
+    }
 
-let str = "Javascript";
+    // Array
 
-for(let char of str){
-    console.log(char)
-}
+    let arr = [120, 130, 140, 150]
 
+    for(let key in arr){
+        console.log(key)
+    }
 
-// Function
+    for(let key in arr){
+        console.log(arr[key])
+    }
 
-function* genFun(){
-    yield "One"
-    yield "Two"
-    yield "Three"
-}
+    // String
 
-let iterator = genFun()
+    let str = "ECMA Script"
 
-for(let val of iterator){
-    console.log(val)
-}
+    for(let key in str){
+        console.log(key)
+    }
 
-
-// Object (key value pair) not iterable using for of loop as this loop requires the value to be single
-
-let obj = {
-    id:1
-}
-
-for(let key of obj){
-    console.log(key)
-} // TypeError: obj is not iterable
+    for(let key in str){
+        console.log(str[key])
+    }
