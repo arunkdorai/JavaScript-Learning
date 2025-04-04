@@ -1,73 +1,48 @@
-let arr = [1, 2, 3, 4];
-let arr1 = [5, 6, 7, 8];
+// Array Methods - sort, reverse, includes, join & toString
 
-// Concat Method - doesn't change/modify the original array
-
+// Sort Method - It changes/modifies original array
 /*
-let newArr = arr.concat(arr1)
+let arr = [4, 9, 3, 5, 10, 20, 15, 45, 114, 345, "&", " "]
 
-console.log(newArr)
+arr.sort() // Sorts based on ASCII Order
 
-let newArr1 = arr.concat(10,20,30)
+console.log(arr)
 
-console.log(newArr1)
+// Reverse Method - It changes/modifies original array
 
-let newArr2 = [].concat(arr)
+let arr1 = [10, 20, 30, 40]
 
-console.log(newArr2)
+arr1.reverse()
 
+console.log(arr1)
 
-// Slice Method
+// Includes Method - To check if a value is present in the array or not. It returns a boolean.
 
-let newArr3 = [10, 2, 3, 5, 6, 7, 8]
-
-let slicedArr = newArr3.slice() // will slice all the elements of the newArr3 into slicedArr
-
-console.log(slicedArr)
-
-// slice(startIndex, endIndex(excludes endIndex))
-let slicedArr1 = newArr3.slice(1)  // this will slice all elements from 1st index of newArr3 into slicedArr1
-
-console.log(slicedArr1)
-
-let slicedArr2 = newArr3.slice(1, 4) // this will slice elements from 1st index of newArr3 4-1 = 3 index (excludes 4th index) into slicedArr2
-
-console.log(slicedArr2)
-
-let slicedArr3 = newArr3.slice(0,3)
-
-console.log(slicedArr3)
-
-
-// Flat Method - helps to remove nested array
-
-let arr2 = [1,2,3,[4,5,[6,7,8]]]
-
-let newArr2 = arr2.flat()
-
-console.log(newArr2)
-
-let newArr3 = arr2.flat(2)
-
-console.log(newArr3)
-
-let arr3 = [1,2,3,[4,5,[6,7,8, [9,10, [11,12, [13,14, 15, 16]]]]]]
-
-let newArr4 = arr3.flat(Infinity)
-
-console.log(newArr4)
+console.log(arr1.includes(40))
+console.log(arr1.includes(50))
 */
 
-// Fill Method - to replace the array values/elements - this changes/modifies original array
+// Join Method
 
-let arr4 = [10, 20, 30];
+let arr20 = [1,2,3,4,5]
 
-arr4.fill(50);
+let joinedVal = arr20.join()
 
-console.log(arr4);
+console.log(joinedVal)
 
-// array.fill(valueToFill, startIndex, endIndex(doesn't include))
+let joinedVal1 = arr20.join(".")
 
-arr4.fill(200, 0, 2);
+console.log(joinedVal1)
 
-console.log(arr4)
+let joinedVal2 = arr20.join("-")
+
+console.log(joinedVal2)
+
+
+// toString Method
+
+let str = arr20.toString()
+
+console.log(str)
+
+// join vs toString
