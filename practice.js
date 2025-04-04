@@ -1,55 +1,41 @@
-// Array Destructuring
+// Array Methods
 
-let arr = [10, 20, 30, 40];
+// let arr = [100,200,300,400]
 
-let [a, b, c, d] = arr;
+// // pop - removes last element in the array - it changes/modifies the original array
 
-console.log(a, b, c, d)
+// let poppedVal = arr.pop()
 
-let arr1 = [15, 25, 35, 45];
+// console.log(poppedVal, arr)
 
-let [x,,,z] = arr1
+// // push - adds new element/s at the end of the array
 
-console.log(x, z)
+// arr.push(500, 600, "six")
 
-let arr2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+// console.log(arr)
 
-let [a1, a2, a3, ...a4] = arr2 // ...a4 is rest operator
+// // shift - removes first element in the array
 
-console.log(a1, a2, a3, a4)
+// let firstVal = arr.shift()
 
-// Nested Array Destructuring
+// console.log(firstVal, arr)
 
+// // unshift - add element/s at the beginning of the array
 
-let nestArr = [1,2,3,4, [10, 20, [30, 40]]]
+// arr.unshift(-2, -1, 0, 10, 20)
 
-let [b1, b2, b3, b4, [c1, c2, [d1, d2]]] = nestArr
+// console.log(arr)
 
-console.log(b4, d2)
+// splice - we can add, remove and replace at the same time
 
-// Object Destructuring
+let newArr = [10, 20, 30, 40];
 
-let obj = {
-    id:1,
-    name1: "Arun"
-}
+// splice(startIndex, count(number of elements to remove from the index), ...items(elements to add))
 
-let {id, name1} = obj
-
-console.log(id, name1)
-
-// Nested Object Destructuring
-
-let nestObj = {
-    id:1,
-    name1: "Arun",
-    bankDetails: {
-        accName:"Kumar",
-        accNo:123456,
-        branch:"xyz"
-    }
-}
-
-let {id, name1, bankDetails: { accName, accNo, branch }} = nestObj
-
-console.log(id, name1, accName, accNo, branch)
+// newArr.splice() // doesn't remove any elements as there are no details given.
+// newArr.splice(1) // removes all the elements in the array starting from index 1.
+// newArr.splice(1, 2) // removes two elements in the array starting from index 1.
+// newArr.splice(1, 2, "newVal", true, [11, 12]); // removes two elements in the array starting from index 1 and then adds three elements from the 1st index.
+// newArr.splice(0, 0, 100, 200, 300); // no elements are removed from 0th index (count=1) and three elements are added from 0th index.
+newArr.splice(-1, 0, 500, 600, 700); // -1 index values indicates it starts from last index.
+console.log(newArr);
