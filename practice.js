@@ -1,32 +1,36 @@
-function normalFun() {
-  console.log("Executed whenever called");
+// Generator Function
+
+function* generatorFunction(){
+    yield "First val"
+    yield "Second val"
+    yield "Third val"
+    return "Final Val"
 }
 
-normalFun();
-normalFun();
-normalFun();
+let generator = generatorFunction()
 
-// Self Invoked Function (IIFE)
+console.log(generator.next())
 
-(function () {
-  console.log("Self Invoked Function");
-})();
+console.log("I'm executing after first yield statement")
 
-(function (userName, age) {
-  console.log("Self Invoked Function ", userName+age);
-})("Virat", 36);
+console.log(generator.next().value)
+
+console.log("I'm executing after second yield statement")
+
+console.log(generator.next().done)
+
+console.log(generator.next())
 
 
-// Closure
-
-function outerFunction() {
-        let outerVariable = "I'm from outer scope"
-        function innerFunction() {
-                console.log(outerVariable)
-        }
-        return innerFunction
+function* url(){
+    yield "https:/"
+    yield "www.google.com"
+    yield 'homePage'
 }
 
-let inFunc = outerFunction()
+let origin1 = url()
 
-inFunc()
+console.log(origin1.next().value)
+console.log(origin1.next().value)
+console.log(origin1.next().value)
+console.log(origin1.next())
