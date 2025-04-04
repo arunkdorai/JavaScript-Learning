@@ -1,41 +1,73 @@
-// Array Methods
+let arr = [1, 2, 3, 4];
+let arr1 = [5, 6, 7, 8];
 
-// let arr = [100,200,300,400]
+// Concat Method - doesn't change/modify the original array
 
-// // pop - removes last element in the array - it changes/modifies the original array
+/*
+let newArr = arr.concat(arr1)
 
-// let poppedVal = arr.pop()
+console.log(newArr)
 
-// console.log(poppedVal, arr)
+let newArr1 = arr.concat(10,20,30)
 
-// // push - adds new element/s at the end of the array
+console.log(newArr1)
 
-// arr.push(500, 600, "six")
+let newArr2 = [].concat(arr)
 
-// console.log(arr)
+console.log(newArr2)
 
-// // shift - removes first element in the array
 
-// let firstVal = arr.shift()
+// Slice Method
 
-// console.log(firstVal, arr)
+let newArr3 = [10, 2, 3, 5, 6, 7, 8]
 
-// // unshift - add element/s at the beginning of the array
+let slicedArr = newArr3.slice() // will slice all the elements of the newArr3 into slicedArr
 
-// arr.unshift(-2, -1, 0, 10, 20)
+console.log(slicedArr)
 
-// console.log(arr)
+// slice(startIndex, endIndex(excludes endIndex))
+let slicedArr1 = newArr3.slice(1)  // this will slice all elements from 1st index of newArr3 into slicedArr1
 
-// splice - we can add, remove and replace at the same time
+console.log(slicedArr1)
 
-let newArr = [10, 20, 30, 40];
+let slicedArr2 = newArr3.slice(1, 4) // this will slice elements from 1st index of newArr3 4-1 = 3 index (excludes 4th index) into slicedArr2
 
-// splice(startIndex, count(number of elements to remove from the index), ...items(elements to add))
+console.log(slicedArr2)
 
-// newArr.splice() // doesn't remove any elements as there are no details given.
-// newArr.splice(1) // removes all the elements in the array starting from index 1.
-// newArr.splice(1, 2) // removes two elements in the array starting from index 1.
-// newArr.splice(1, 2, "newVal", true, [11, 12]); // removes two elements in the array starting from index 1 and then adds three elements from the 1st index.
-// newArr.splice(0, 0, 100, 200, 300); // no elements are removed from 0th index (count=1) and three elements are added from 0th index.
-newArr.splice(-1, 0, 500, 600, 700); // -1 index values indicates it starts from last index.
-console.log(newArr);
+let slicedArr3 = newArr3.slice(0,3)
+
+console.log(slicedArr3)
+
+
+// Flat Method - helps to remove nested array
+
+let arr2 = [1,2,3,[4,5,[6,7,8]]]
+
+let newArr2 = arr2.flat()
+
+console.log(newArr2)
+
+let newArr3 = arr2.flat(2)
+
+console.log(newArr3)
+
+let arr3 = [1,2,3,[4,5,[6,7,8, [9,10, [11,12, [13,14, 15, 16]]]]]]
+
+let newArr4 = arr3.flat(Infinity)
+
+console.log(newArr4)
+*/
+
+// Fill Method - to replace the array values/elements - this changes/modifies original array
+
+let arr4 = [10, 20, 30];
+
+arr4.fill(50);
+
+console.log(arr4);
+
+// array.fill(valueToFill, startIndex, endIndex(doesn't include))
+
+arr4.fill(200, 0, 2);
+
+console.log(arr4)
