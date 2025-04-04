@@ -1,53 +1,44 @@
-// For In loop
+// Spread Operator
+
+// Array
+
+// let hobbies = ["Cricket", "Tennis", "Chess"]
+// let hobbies1 = ["Reader", "Writer"]
+
+// let newArr = [...hobbies, ...hobbies1]
+
+// hobbies[0] = "Baseball"
+
+// console.log(newArr, hobbies)
+
+// let newArr1 = [...newArr, "Video Editor", "Content Writer"]
+
+// console.log(newArr1)
 
 // Object
 
-
-let person1 = {
-    uName : "Arun",
-    hobbies : ["Cricket", "Web Development", "Gaming"],
-    familyDetails : {
-        totalMembers : 6,
-        siblings : ["a", "b", "c", "d"]
-    },
-    walk(){
-        console.log("I'm going to home")
-    }
+let empDetail = {
+    empId: "ID5546",
+    empName: "Arun",
+    empRole: "Full Stack Developer"
 }
 
+let team2 = {...empDetail, empSalary : 1000000, team2Desig : "SDE"}
 
-// syntax of for in loop : for(let key in object){
-//     console.log(key)
-// }
+console.log(team2)
 
-    for(let key in person1){
-        console.log(key)
-    }
+let team3 = {...empDetail, empId:"ID12345" ,empSalary : 1000000, team2Desig : "SDE"}
 
-    for(let key in person1){
-        console.log(person1[key])
-    }
+console.log(team3)
 
-    // Array
+// Rest Parameter or Rest Operator
 
-    let arr = [120, 130, 140, 150]
+function restParams(...arr){
+    console.log(arr)
+}
+restParams(1,2,3,4,5)
 
-    for(let key in arr){
-        console.log(key)
-    }
-
-    for(let key in arr){
-        console.log(arr[key])
-    }
-
-    // String
-
-    let str = "ECMA Script"
-
-    for(let key in str){
-        console.log(key)
-    }
-
-    for(let key in str){
-        console.log(str[key])
-    }
+function restParams1(a, b, ...arr1){ // A rest parameter must be last in a parameter list.
+    console.log(a, b, arr1)
+}
+restParams1(1,2,3,4,5)
