@@ -1,54 +1,24 @@
-// forEach Method
+let employees = [
+  { empName: "Arun", salary: 150000 },
+  { empName: "Jamie", salary: 100000 },
+  { empName: "Philip", salary: 120000 },
+];
 
-let fruits = ["Apple", "WaterMelon", "MuskMelon", "Banana"]
+// filter method
 
-// fruits.forEach(printFruit)
+let filterData = employees.filter((val, index, array) => {
+  console.log(index);
+  return val.salary > 110000;
+});
+// let filterData = employees.filter(val => val.salary>110000).fill({id:1, name1:"xyz"})
 
-// function printFruit(currentElement, index, totalArray){
-//     console.log(currentElement, index, totalArray)
-// }
+console.log(filterData);
 
-// // Map Method
+// find
 
-// fruits.map(function(currentElement, index, totalArray){
-//     console.log(currentElement, index, totalArray)
-// })
+let filterDataByFind = employees.find((val, index, array) => {
+  console.log(index)
+  return val.salary > 100000;
+});
 
-// forEach callback function doesn't return anything, map callback function returns a new array
-
-// let newArr = fruits.forEach((cElement)=>{
-//     console.log(cElement.toUpperCase())
-//     return cElement
-// })
-
-// console.log(newArr) // Doesn't return anything and output will be undefined
-
-// let newArr1 = fruits.map((cElement)=>{
-//     return cElement
-// })
-
-// console.log(newArr1) // Returns a new array with the elements [ 'Apple', 'WaterMelon', 'MuskMelon', 'Banana' ]
-
-// let newArr2 = fruits.map((cElement, index)=>{
-//     return {id:index+1, fruit: cElement}
-// })
-
-// console.log(newArr2)
-
-// Chaining method
-
-// let newArr = fruits.map(cEle => cEle.toUpperCase()).sort().fill("123")
-
-// console.log(newArr)
-
-// let newArr1 = fruits.forEach(cEle => cEle.toUpperCase()).sort().fill("123")
-
-// console.log(newArr1) // TypeError: Cannot read properties of undefined (reading 'sort')
-
-// Condition based statement
-
-let newArr2 = fruits.map((cEle) => { return cEle == "Apple"})
-
-console.log(newArr2)
-
-fruits.forEach(val => console.log(val == "Apple"))
+console.log(filterDataByFind);
