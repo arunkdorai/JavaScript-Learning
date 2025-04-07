@@ -1,37 +1,36 @@
+let arr = [10,2,3,4,5]
 
-// let arr = [10, 5, 100,30,6, 2]
+// 1+2+3+4+5 => 24
 
-// let newArr = arr.sort((a,b)=>{return a-b})
+let totalVal = 0
 
-// a-b (ascending)=> positive, a>b => swapping
-// a-b (ascending)=> negative, a<b => no swapping
-// b-a (descending)=> positive, b>a => swapping
-// b-a (descending)=> negative, b<a => no swapping
+for(let i=0; i<arr.length; i++){
+    totalVal = totalVal + arr[i]
+}
 
-// console.log(newArr)
+console.log(totalVal)
 
-// let newArr1 = [10,20,30, 1,4, true, "100"]
+let totalVal1 = arr.reduce((acc, cElement, index, array)=>{
+    return acc + cElement
+}, 0)
 
-// let descendingSort = newArr1.sort((a, b)=> b-a)
+// 1st => acc + cElement => 0 + 10 => 10
+// 2nd => 10 + 2 => 12
+// 3rd => 12 + 3 => 15
+// 4th => 15 + 4 => 19
+// 5th => 19 + 5 => 24
 
-// b-a => "100" - true => 100 - 1 => 90 => swapping
+console.log(totalVal1)
 
-//b-a => "100A" - true => NaN - true => NaN => no swap
+let employees = [
+    {eName: "Xyz", salary:1000},
+    {eName: "Abc", salary:18000},
+    {eName: "Billy", salary:20000},
+    {eName: "Carl", salary:25000},
+]
 
-// console.log(descendingSort)
+let calcTotalSalary = employees.reduce((acc, cElement)=>{
+    return acc +cElement.salary
+}, 0)
 
-// Some and Every
-
-let arr1 = [1,2,3,4,5]
-
-let value = arr1.some((ele, index, arr)=>{
-    return ele%2 == 0
-})
-
-console.log(value)
-
-let value1 = arr1.every((ele, index, arr)=>{
-    return ele%2 == 0
-})
-
-console.log(value1)
+console.log(calcTotalSalary)
