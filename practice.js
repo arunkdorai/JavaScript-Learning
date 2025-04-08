@@ -1,117 +1,127 @@
-// charAt - returns the string present in the given index
+// Math Objects
 
-// let str = "Hello World"
+// Math.abs(x) - Returns the absolute value of a number (the value without regard to whether it is positive or negative). For example, the absolute value of -5 is the same as the absolute value of 5.
 
-// console.log(str.charAt(1), str.charAt(str.length-1))
+// console.log(Math.abs(-50))
+// console.log(Math.abs(0))
 
-// charCodeAt - returns the ASCII/unicode value of the string present in the given index
+// Math.sign(x) - Returns the sign of the x, indicating whether x is positive, negative or zero.
 
-// let str1 = "Javascript"
+// console.log(Math.sign(-10))
+// console.log(Math.sign(0))
+// console.log(Math.sign(10))
 
-// console.log(str1.charCodeAt(2))
+// Math.sqrt(x) - Returns the square root of a number.
 
-// concat - Returns a string that contains the concatenation of two or more strings.
+// console.log(Math.sqrt(5))
+// console.log(Math.sqrt(36))
 
-// let newStr = str.concat(" ",str1)
+// Math.cbrt(x) - Returns an implementation-dependent approximation to the cube root of number.
 
-// console.log(newStr)
+// console.log(Math.cbrt(8))
+// console.log(Math.cbrt(9))
 
-// includes - Returns true if searchString appears as a substring of the result of converting this object to a String, at one or more positions that are greater than or equal to position; otherwise, returns false.
+// Math.pow(base, exponent) - Returns the value of a base expression taken to a specified power.
 
-// let str2 = "Single Threaded"
+// console.log(Math.pow(2, 3))
+// console.log(Math.pow(6, 2))
 
-// console.log(str2.includes("i", 1))
-// console.log(str2.includes("j"))
+// Math.min(...values) - Returns the smaller of a set of supplied numeric expressions.
 
-//indexOf - Returns the position of the first occurrence of a substring.
+// let arr = [1,2,3,4,5]
 
-// let newStr1 = "Reactjs"
+// console.log(Math.min(...arr))
+// console.log(Math.min(...arr, 10, 15, 0, -5))
 
-// console.log(newStr1.indexOf("e"))
-// console.log(newStr1.indexOf("t", 3))
+// Math.max(...values) - Returns the larger of a set of supplied numeric expressions.
 
-// lastIndexOf - Returns the last occurrence of a substring in the string.
+// console.log(Math.max(...arr))
+// console.log(Math.max(...arr, 100, 28))
 
-// let newStr1 = "Reactjs"
+// Math.random() - Returns a pseudorandom number between 0 and 1.
 
-// console.log(newStr1.lastIndexOf("e"))
-// console.log(newStr1.lastIndexOf("t", 5))
+// console.log(Math.random())
 
-// repeat - number of copies to append
-// Returns a String value that is made from count copies appended together. If count is 0, the empty string is returned.
+// let randomNum = Math.random()*100
 
-// let newStr = "Javascript"
+// console.log(randomNum.toFixed(3))
 
-// console.log(newStr.repeat(2))
+// Math.ceil(x) - Returns the smallest integer greater than or equal to its numeric argument.
 
-// replace - Replaces text in a string, using a regular expression or search string.
-// replaceAll - Replace all instances of a substring in a string, using a regular expression or search string.
+// console.log(Math.ceil(2.65))
+// console.log(Math.ceil(5.01))
 
-// let str = "Js is a Script language - Js"
+// Math.floor(x) - Returns the greatest integer less than or equal to its numeric argument.
 
-// console.log(str.replace("Js", "Javascript"))
+// console.log(Math.floor(2.65))
+// console.log(Math.floor(5.99))
 
-// console.log(str.replaceAll("Js", "Javascript"))
+// Math.round(x) - Returns a supplied numeric expression rounded to the nearest integer.
 
-// slice - Returns a section of a string.
+// console.log(Math.round(2.49))
+// console.log(Math.round(2.50))
+// console.log(Math.round(2.51))
 
-// let newStr = "Single Thread"
+// Math.trunc(x) - Returns the integral part of the a numeric expression, x, removing any fractional digits. If x is already an integer, the result is x.
 
-// console.log(newStr.slice(3))
-// console.log(newStr.slice(3, 9))
-// console.log(newStr.slice(-3, -1))
+// console.log(Math.trunc(2.3654))
+// console.log(Math.trunc(5))
 
-// substring - Returns the substring at the specified location within a String object.
 
-// let newStr1 = "Single Thread"
+// Date Objects
 
-// console.log(newStr1.substring(3))
-// console.log(newStr1.substring(3,9))
-// console.log(newStr1.substring(-3))
-// console.log(newStr1.substring(8,0))
+let date = new Date()
 
-// Split - Split a string into substrings using the specified separator and return them as an array.
+console.log(date)
 
-// let words = "My Name is Iron-Man"
+// Date.getFullYear() - Gets the year, using local time.
 
-// console.log(words.split(" "))
-// console.log(words.split(" ", 2))
-// console.log(words.split("-"))
-// console.log(words.split("-", 1))
+console.log(date.getFullYear())
 
-// startsWith
+// Date.getMonth() - Gets the month, using local time - provides index 0 to 11
 
-let words = "My Name is Iron-Man"
+console.log(date.getMonth())
+console.log(date.getMonth()+1) // correct month
 
-// console.log(words.startsWith("M"))
-// console.log(words.startsWith("N",3))
-// console.log(words.startsWith("N",4))
-// console.log(words.startsWith("Name",3))
+// Date.getDate() - Gets the day-of-the-month, using local time.
 
-// endsWith
+console.log(date.getDate())
 
-// console.log(words.endsWith("n"))
-// console.log(words.endsWith("e", 7))
-// console.log(words.endsWith("Iron", words.length-4))
+// Date.getHours() - Gets the hours in a date, using local time.
 
-// toLowerCase
+console.log(date.getHours())
 
-console.log(words.toLowerCase())
+// Date.getMinutes() - Gets the minutes of a Date object, using local time.
 
-// toUpperCase
+console.log(date.getMinutes())
 
-console.log(words.toUpperCase())
+// Date.getSeconds() - Gets the seconds of a Date object, using local time.
 
-// trim - Removes the leading and trailing white space and line terminator characters from a string.
+console.log(date.getSeconds())
 
-let newWords = "   My Name is Iron-Man   "
+// Date.setFullYear(year, month, day) - Sets the year of the Date object using local time.
+// month — A zero-based numeric value for the month (0 for January, 11 for December). Must be specified if numDate is specified.
 
-console.log(newWords.trim())
+// date.setFullYear(2020, 5, 30)
 
-// trimStart / trimLeft
+// console.log(date)
 
-console.log(newWords.trimStart())
+// Date.setMonth(month, day) - A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.
+// Sets the month value in the Date object using local time.
 
-// trimEnd / trimRight
+date.setMonth(10, 15)
 
-console.log(newWords.trimEnd())
+console.log(date)
+
+console.log(date.toLocaleDateString()) // Converts a date to a string by using the current or specified locale.
+console.log(date.toDateString()) // Returns a date as a string value.
+console.log(date.toLocaleString()) // Converts a date and time to a string by using the current or specified locale.
+console.log(date.toLocaleTimeString()) // Converts a time to a string by using the current or specified locale.
+
+// Date.setDate(day)
+
+// Date.setHours(hour, minute, second, millisecond)
+
+// Date.setMinutes(minute, second, millisecond)
+
+// Date.setSeconds(second, millisecond)
