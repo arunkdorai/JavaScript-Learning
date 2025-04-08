@@ -1,127 +1,102 @@
-// Math Objects
+// Object Methods
 
-// Math.abs(x) - Returns the absolute value of a number (the value without regard to whether it is positive or negative). For example, the absolute value of -5 is the same as the absolute value of 5.
+// let person = {
+//     pName : "John",
+//     age : 30
+// }
 
-// console.log(Math.abs(-50))
-// console.log(Math.abs(0))
+// console.log(person)
 
-// Math.sign(x) - Returns the sign of the x, indicating whether x is positive, negative or zero.
+// Object.create(o) - Creates an object that has the specified prototype or that has null prototype.
+// @param o — Object to use as a prototype. May be null.
 
-// console.log(Math.sign(-10))
-// console.log(Math.sign(0))
-// console.log(Math.sign(10))
+// let newObj = Object.create(person)
+// newObj.location = "Bangalore"
 
-// Math.sqrt(x) - Returns the square root of a number.
+// console.log(newObj.__proto__)
+// console.log(Object.getPrototypeOf(newObj))
+// console.log(newObj.age)
+// console.log(newObj)
 
-// console.log(Math.sqrt(5))
-// console.log(Math.sqrt(36))
+/* Object.assign(target, source) - Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object.
+@param target — The target object to copy to.
+@param source — The source object from which to copy properties.
+*/
+// let person1 = {
+//     id : "ID456789",
+//     name1 : "Wick"
+// }
 
-// Math.cbrt(x) - Returns an implementation-dependent approximation to the cube root of number.
+// let newObj1 = Object.assign(person1, {role : "Full Stack Developer", salary : 100000})
 
-// console.log(Math.cbrt(8))
-// console.log(Math.cbrt(9))
+// console.log(person1)
+// console.log(newObj1)
 
-// Math.pow(base, exponent) - Returns the value of a base expression taken to a specified power.
+/* Object.entries(o) - Returns an array of key/values of the enumerable own properties of an object
 
-// console.log(Math.pow(2, 3))
-// console.log(Math.pow(6, 2))
+@param o — Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+*/
 
-// Math.min(...values) - Returns the smaller of a set of supplied numeric expressions.
+let employee = {
+    eName : "Greg",
+    eRole : "Back end Developer"
+}
 
-// let arr = [1,2,3,4,5]
+let multiArr = Object.entries(employee)
 
-// console.log(Math.min(...arr))
-// console.log(Math.min(...arr, 10, 15, 0, -5))
+multiArr.push(["Id", "ID465798"])
 
-// Math.max(...values) - Returns the larger of a set of supplied numeric expressions.
+console.log(multiArr)
 
-// console.log(Math.max(...arr))
-// console.log(Math.max(...arr, 100, 28))
+/* Object.fromEntries(entries) - Returns an object created by key-value entries for properties and methods
+@param entries — An iterable object that contains key-value entries for properties and methods.
+*/
+let normalObj = Object.fromEntries(multiArr)
 
-// Math.random() - Returns a pseudorandom number between 0 and 1.
-
-// console.log(Math.random())
-
-// let randomNum = Math.random()*100
-
-// console.log(randomNum.toFixed(3))
-
-// Math.ceil(x) - Returns the smallest integer greater than or equal to its numeric argument.
-
-// console.log(Math.ceil(2.65))
-// console.log(Math.ceil(5.01))
-
-// Math.floor(x) - Returns the greatest integer less than or equal to its numeric argument.
-
-// console.log(Math.floor(2.65))
-// console.log(Math.floor(5.99))
-
-// Math.round(x) - Returns a supplied numeric expression rounded to the nearest integer.
-
-// console.log(Math.round(2.49))
-// console.log(Math.round(2.50))
-// console.log(Math.round(2.51))
-
-// Math.trunc(x) - Returns the integral part of the a numeric expression, x, removing any fractional digits. If x is already an integer, the result is x.
-
-// console.log(Math.trunc(2.3654))
-// console.log(Math.trunc(5))
+console.log(normalObj)
 
 
-// Date Objects
+/* Object.keys - Returns the names of the enumerable string properties and methods of an object.
+@param o — Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+*/
 
-let date = new Date()
+let onlyKeys = Object.keys(normalObj)
 
-console.log(date)
+console.log(onlyKeys)
 
-// Date.getFullYear() - Gets the year, using local time.
+/* Object.values - Returns an array of values of the enumerable own properties of an object
+@param o — Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+*/
 
-console.log(date.getFullYear())
+let onlyValues = Object.values(normalObj)
 
-// Date.getMonth() - Gets the month, using local time - provides index 0 to 11
+console.log(onlyValues)
 
-console.log(date.getMonth())
-console.log(date.getMonth()+1) // correct month
+/* Object.freeze - Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+@param o — Object on which to lock the attributes.
+*/
 
-// Date.getDate() - Gets the day-of-the-month, using local time.
+let newObj1 = {
+    id:1
+}
 
-console.log(date.getDate())
+Object.freeze(newObj1)
 
-// Date.getHours() - Gets the hours in a date, using local time.
+newObj1.name1 = "William"
+newObj1.id = "ID123456"
 
-console.log(date.getHours())
+console.log(newObj1)
 
-// Date.getMinutes() - Gets the minutes of a Date object, using local time.
+/* Object.isFrozen - Object to test.
+Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
+*/
 
-console.log(date.getMinutes())
+console.log(Object.isFrozen(newObj1))
+console.log(Object.isFrozen(normalObj))
 
-// Date.getSeconds() - Gets the seconds of a Date object, using local time.
+/* Object.seal - revents the modification of attributes of existing properties, and prevents the addition of new properties.
+@param o — Object on which to lock the attributes.
+*/
+console.log(Object.seal())
 
-console.log(date.getSeconds())
-
-// Date.setFullYear(year, month, day) - Sets the year of the Date object using local time.
-// month — A zero-based numeric value for the month (0 for January, 11 for December). Must be specified if numDate is specified.
-
-// date.setFullYear(2020, 5, 30)
-
-// console.log(date)
-
-// Date.setMonth(month, day) - A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.
-// Sets the month value in the Date object using local time.
-
-date.setMonth(10, 15)
-
-console.log(date)
-
-console.log(date.toLocaleDateString()) // Converts a date to a string by using the current or specified locale.
-console.log(date.toDateString()) // Returns a date as a string value.
-console.log(date.toLocaleString()) // Converts a date and time to a string by using the current or specified locale.
-console.log(date.toLocaleTimeString()) // Converts a time to a string by using the current or specified locale.
-
-// Date.setDate(day)
-
-// Date.setHours(hour, minute, second, millisecond)
-
-// Date.setMinutes(minute, second, millisecond)
-
-// Date.setSeconds(second, millisecond)
+// Object.freeze() vs Object.seal()
