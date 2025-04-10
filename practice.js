@@ -1,53 +1,155 @@
-// let employee = {
-//     eName : "Arun",
-//     eSalary : 1000,
-//     introYourself : function(a, b){
-//         console.log(a + b, this.eName)
-//     }
+// stack - to store primitive value
+// heap - to store non primitive values (array, object, function)
+
+/* Call By Value
+
+    Stack (Before Modification):
+
+    | Address | Variable | Value |
+    |---------|----------|-------|
+    | 0x100   |    x     |   10  |
+    | 0x104   |    y     |  x = 10  |
+
+
+    Stack (After Modification):
+
+    | Address | Variable | Value |
+    |---------|----------|-------|
+    | 0x100   |    x     |   20  |
+    | 0x104   |    y     |   10  |
+
+*/
+
+// let x = 10
+
+// let y = x
+
+// console.log(x, y)
+
+// x = 20
+
+// console.log(x, y)
+
+/* call by reference
+
+    Stack Memory
+
+    | address    | Variable       | Value -> Reference/Pointer (Address) |
+    |------------|----------------|--------------------------|
+    | 0x100      | obj1           | 0x001                    |
+    | 0x104      | arr1           | 0x002                    |
+    | 0x108      | obj2           | obj1 = 0x001             |
+    | 0x112      | arr2           | arr1 = 0x002             |
+
+    Heap Memory
+
+    | Address       | Object              |
+    |---------------|---------------------|
+    | 0x001         | { name1: "Tony" }    |
+    | 0x002         | [ 1, 2, 3 ]        |
+
+*/
+
+// let obj1 = {
+//   name1: "Tony",
+// };
+
+// let obj2 = obj1;
+
+// obj2.name1 = "Stark";
+
+// obj2.role = "Developer"
+
+// console.log(obj1, obj2)
+
+// let arr1 = [1, 2, 3];
+
+// let arr2 = arr1
+
+// arr1[0] = "One"
+
+// console.log(arr1, arr2)
+
+// Deep Copy
+
+// let a = 10
+// let b = a
+
+// a = 20
+
+// console.log(a, b)
+
+// let obj1 = {
+//     name1 : "Elon",
+//     role : "Developer"
 // }
 
-// console.log(employee.eName)
-// employee.introYourself(4, 8)
+// let obj2 = { ...obj1 }
 
-// eName = "Roger";
-// let eName = "Roger";
-// var eName = "Roger";
+// obj2.name1 = "Musk"
 
-// let employee1 = {
-//   eName: "Arun",
-//   eSalary: 1000,
-//   introYourself: (a, b) => {
-//     console.log(a + b, this.eName);
+// console.log(obj1, obj2)
+
+// Shallow Copy
+
+// let person = {
+//   name1: "John",
+//   role: "Youtuber",
+//   hobbies: {
+//     cricket: "T20 Player",
+//     football: "60 mins",
 //   },
 // };
 
-// employee1.introYourself(10, 20);
+// let person2 = { ...person };
 
-// call() method - Calls a method of an object, substituting another object for the current object.
+// console.log(person, person2);
 
-let person = {
-    pFName : "Walt",
-    pLName : "Disney"
-}
+// person.role = "Video Creator"
 
-let person1 = {
-    pId : "UQI123",
-    pFName : "James",
-    pLName : "Bond",
-    introYourself : function(a, b){
-        console.log(this.pFName + " " + this.pLName + " " + (a + b))
-        return (a+b)
-    }
-}
+// person.hobbies.cricket = "ODI Player"
 
-person1.introYourself.call(person, 10, 20)
+// console.log(person, person2);
 
-// apply() method - Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
+// Deep Copy for nested objects
 
-person1.introYourself.apply(person, [100, 200])
+// let person3 = { ...person, hobbies : { ...person.hobbies }}
 
-// bind() method - For a given function, creates a bound function that has the same body as the original function. The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+// let person4 = JSON.stringify(person)
 
-let newFun = person1.introYourself.bind(person, 500, 300)
+// console.log(person4)
 
-console.log(newFun())
+// let newPerson4 = JSON.parse(person4)
+
+// person.role = "Video Creator"
+
+// person.hobbies.cricket = "ODI Player"
+
+// console.log(person, person3);
+
+// console.log(newPerson4)
+
+
+// Array - Shallow Copy 
+
+let arr = [1,2,3,[4,5,6]]
+
+let arr1 = [...arr]
+
+// console.log(arr, arr1)
+
+// Array - Deep Copy
+
+let newArr = JSON.stringify(arr)
+
+let newArr1 = JSON.parse(newArr)
+
+arr[0] = "One"
+
+// console.log(arr, arr1)
+
+arr[3][0] = "Four"
+
+console.log(arr, arr1)
+
+console.log(arr, newArr1)
