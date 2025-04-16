@@ -1,34 +1,35 @@
-// Async Await
+// Fetch API
 
-let newPromise = new Promise((fulfilled, failure) => {
-  let dataReceived = false;
+fetch("https://fakestoreapi.com/users/abcd", { method: "GET" })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Data Not Found");
+    } else {
+      return response.json();
+    }
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
 
-  if (dataReceived) {
-    fulfilled("Data Fetched Successfully");
-  } else {
-    // failure("Data Not Found");
-    throw new Error("Search Proper Data")
-  }
-});
-
-// newPromise.then((message)=>{
-//     console.log(message)
-// })
-
-async function executePromise() {
+async function fetchData() {
   try {
-    let message = await newPromise;
+    let response = await fetch("https://fakestoreapi.com/users", {
+      method: "GET",
+    });
 
-    let newMessage = await newPromise;
-    console.log(message);
-    console.log(`Next Message: ${newMessage}`)
+    if (!response.ok) {
+      throw new Error("Data Not Found");
+    } else {
+      let data = await response.json();
+      console.log(data);
+    }
   } catch (error) {
     console.log(error.message);
-  } finally {
-    console.log("End");
   }
 }
 
-executePromise();
-
-console.log("Last");
+fetchData();
